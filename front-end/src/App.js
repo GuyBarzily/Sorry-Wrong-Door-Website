@@ -1,7 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
 import LayOutContainer from "./containers/LayOutContainer";
-import BasicAppBar from "./components/AppBar";
 import MainSection from "./sections/MainSection";
 import AboutUsSection from "./sections/AboutUsSection";
 import SocialSection from "./sections/SocialSection";

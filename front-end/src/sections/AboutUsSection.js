@@ -11,16 +11,16 @@ const AboutUsSection = () => {
     <div
       id="about-us-section-id"
       style={{
-        backgroundImage: "url(images/AboutUsBackground.jpg)",
+        backgroundImage: "url(images/AboutUsBackground.jpeg)",
         backgroundSize: "cover",
         width: "100vw",
         height: "100vh",
-        paddingLeft: "20vw",
-        paddingTop: "10vh",
       }}
     >
-      <Title props={aboutUsProp} />
-      <AboutUsData />
+      <div style={{ paddingLeft: "20vw", paddingTop: "10vh" }}>
+        <Title props={aboutUsProp} />
+        <AboutUsData />
+      </div>
     </div>
   );
 };

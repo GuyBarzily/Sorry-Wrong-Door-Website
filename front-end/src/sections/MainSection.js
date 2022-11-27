@@ -23,6 +23,10 @@ const MainSection = () => {
           backgroundColor: "red",
           width: "30vw",
           height: "5vh",
+          "&.MuiButtonBase-root:hover": {
+            bgcolor: "wheat",
+            color: "black",
+          },
         }}
       >
         View Game

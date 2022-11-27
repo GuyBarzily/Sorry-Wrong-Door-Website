@@ -8,13 +8,13 @@ const AboutUsData = () => {
 
   return (
     <div style={{ width: "50vw" }}>
-      <p style={{ fontSize: "1.5vw", color: "white", textAlign: "left" }}>
+      <p style={{ fontSize: "1.5vw", color: "wheat", textAlign: "left" }}>
         {content}
       </p>
-      <p style={{ fontSize: "1.5vw", color: "white", textAlign: "left" }}>
+      <p style={{ fontSize: "1.5vw", color: "wheat", textAlign: "left" }}>
         {content1}
       </p>
-      <p style={{ fontSize: "1.5vw", color: "white", textAlign: "left" }}>
+      <p style={{ fontSize: "1.5vw", color: "wheat", textAlign: "left" }}>
         {content2}
       </p>
     </div>
