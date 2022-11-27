@@ -14,6 +14,7 @@ const BasicAppBar = () => {
               spy={true}
               smooth={true}
               duration={500}
+              style={{ cursor: "pointer" }}
             >
               About Us
             </Link>
@@ -30,6 +31,7 @@ const BasicAppBar = () => {
               spy={true}
               smooth={true}
               duration={500}
+              style={{ cursor: "pointer" }}
             >
               Gallery
             </Link>
@@ -41,6 +43,7 @@ const BasicAppBar = () => {
               spy={true}
               smooth={true}
               duration={500}
+              style={{ cursor: "pointer" }}
             >
               <img
                 src="/images/Angelgameslogo.png"
@@ -63,6 +66,7 @@ const BasicAppBar = () => {
               spy={true}
               smooth={true}
               duration={500}
+              style={{ cursor: "pointer" }}
             >
               Social Feed
             </Link>
@@ -79,6 +83,7 @@ const BasicAppBar = () => {
               spy={true}
               smooth={true}
               duration={500}
+              style={{ cursor: "pointer" }}
             >
               Closed Beta
             </Link>

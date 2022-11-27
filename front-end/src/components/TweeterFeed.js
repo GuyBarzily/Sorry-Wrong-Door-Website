@@ -5,7 +5,7 @@ export const TweeterFeed = () => {
   return (
     <Timeline
       dataSource={{ sourceType: "profile", screenName: "AngelGamesStud1" }}
-      options={{ width: "400", height: "700" }}
+      options={{ width: "25vw", height: "500vh" }}
     />
   );
 };
