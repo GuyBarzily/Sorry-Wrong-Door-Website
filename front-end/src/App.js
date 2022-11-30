@@ -1,20 +1,22 @@
 import "./App.css";
-import LayOutContainer from "./containers/LayOutContainer";
 import MainSection from "./sections/MainSection";
 import AboutUsSection from "./sections/AboutUsSection";
 import SocialSection from "./sections/SocialSection";
 import ClosedBetaSection from "./sections/ClosedBetaSection";
 import GallerySection from "./sections/GallerySection";
+import BlackSection from "./sections/BlackSection";
+import BasicAppBar from "./components/AppBar";
 
 function App() {
   return (
     <div className="App">
-      <LayOutContainer />
+      <BasicAppBar />
       <MainSection />
       <AboutUsSection />
       <SocialSection />
       <ClosedBetaSection />
       <GallerySection />
+      {/* <BlackSection /> */}
     </div>
   );
 }

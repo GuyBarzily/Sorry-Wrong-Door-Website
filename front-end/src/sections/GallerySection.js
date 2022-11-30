@@ -1,11 +1,11 @@
-import GalleryAbout from "../components/GalaryAbout";
-import GalleryVideos from "../components/GallaryVideos";
 import Title from "../components/Title";
+import GalleryData from "../components/GalleryData";
 
 const GallerySection = () => {
+  const style = {};
   const galleryTitle = {
-    first: "Video",
-    second: "Gallery",
+    first: "Press",
+    second: "Kit",
   };
   return (
     <div
@@ -17,10 +17,19 @@ const GallerySection = () => {
         height: "100vh",
       }}
     >
-      <div style={{ paddingLeft: "20vw", paddingTop: "10vh" }}>
-        <Title props={galleryTitle}></Title>
-        <div style={{ display: "flex" }}></div>
+      <div
+        style={{
+          paddingLeft: "70vw",
+          paddingTop: "20vh",
+          backgroundPosition: "center",
+          backgroundImage: "url(images/GameLogo.png)",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <Title props={galleryTitle} />
       </div>
+      <GalleryData />
     </div>
   );
 };

@@ -1,12 +1,11 @@
 import BasicAppBar from "../components/AppBar";
 
-const LayOutContainer = () => {
+function AppBar() {
   return (
     <div>
       <BasicAppBar />
-      {/* <DrawerAppBar/> */}
     </div>
   );
-};
+}
 
-export default LayOutContainer;
+export default AppBar;
