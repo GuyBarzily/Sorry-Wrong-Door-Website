@@ -27,15 +27,16 @@ const BasicAppBar = () => {
           >
             <Link
               activeClass="active"
-              to="gallery-section-id"
+              to="social-section-id"
               spy={true}
               smooth={true}
               duration={500}
               style={{ cursor: "pointer" }}
             >
-              Gallery
+              Social Feed
             </Link>
           </Typography>
+
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <Link
               activeClass="active"
@@ -54,23 +55,7 @@ const BasicAppBar = () => {
               ></img>
             </Link>
           </Typography>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1 }}
-            color="white"
-          >
-            <Link
-              activeClass="active"
-              to="social-section-id"
-              spy={true}
-              smooth={true}
-              duration={500}
-              style={{ cursor: "pointer" }}
-            >
-              Social Feed
-            </Link>
-          </Typography>
+
           <Typography
             variant="h6"
             component="div"
@@ -86,6 +71,23 @@ const BasicAppBar = () => {
               style={{ cursor: "pointer" }}
             >
               Closed Beta
+            </Link>
+          </Typography>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1 }}
+            color="white"
+          >
+            <Link
+              activeClass="active"
+              to="gallery-section-id"
+              spy={true}
+              smooth={true}
+              duration={500}
+              style={{ cursor: "pointer" }}
+            >
+              Gallery
             </Link>
           </Typography>
         </Toolbar>

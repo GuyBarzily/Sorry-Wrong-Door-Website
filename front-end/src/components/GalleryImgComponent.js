@@ -14,20 +14,11 @@ function GalleryImgComponent(props) {
 
   const handleClick = (event) => {
     setMainImage(event.target.src);
-    console.log(Object.values(event.target)[0].key);
     setIndex(Object.values(event.target)[0].key);
-    func();
-  };
-
-  const func = () => {
-    console.log("func: ", mainIndex);
   };
 
   const handleRightArrow = () => {
     let cur = mainIndex;
-    console.log("handleRight: ", mainIndex);
-    console.log("cur", cur);
-    console.log("len: ", itemData.length);
     if (cur !== itemData.length - 1) {
       setMainImage(itemData[++cur].img);
       setIndex(cur);
@@ -40,7 +31,6 @@ function GalleryImgComponent(props) {
   const handleLeftArrow = () => {
     let cur = mainIndex;
     const len = itemData.length;
-    console.log("len: ", len);
     if (cur !== 0) {
       setMainImage(itemData[--cur].img);
       setIndex(cur);
