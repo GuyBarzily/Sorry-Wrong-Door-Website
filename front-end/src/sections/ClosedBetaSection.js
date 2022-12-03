@@ -15,7 +15,7 @@ const ClosedBetaSection = () => {
         backgroundImage: "url(images/ClosedBetaBackground.jpeg)",
         backgroundSize: "cover",
         width: "100vw",
-        height: "100vh",
+        height: "110vh",
       }}
     >
       <div style={{ paddingLeft: "20vw", paddingTop: "10vh" }}>

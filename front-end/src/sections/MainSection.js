@@ -8,7 +8,7 @@ const MainSection = () => {
         backgroundImage: "url(images//LandingPageBackground.png)",
         backgroundSize: "cover",
         width: "100vw",
-        height: "100vh",
+        height: "110vh",
         justifyContent: "center",
         alignItems: "center",
       }}

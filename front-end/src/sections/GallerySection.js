@@ -2,7 +2,6 @@ import Title from "../components/Title";
 import GalleryData from "../components/GalleryData";
 
 const GallerySection = () => {
-  const style = {};
   const galleryTitle = {
     first: "Press",
     second: "Kit",
@@ -14,7 +13,7 @@ const GallerySection = () => {
         backgroundImage: "url(images/GalleryBackground.jpeg)",
         backgroundSize: "cover",
         width: "100vw",
-        height: "100vh",
+        height: "110vh",
       }}
     >
       <div

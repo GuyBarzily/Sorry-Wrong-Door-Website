@@ -5,7 +5,13 @@ import { Link } from "react-scroll";
 const BasicAppBar = () => {
   return (
     <Box sx={{ display: "flex" }}>
-      <AppBar position="fixed" color="transparent">
+      <AppBar
+        position="fixed"
+        sx={{
+          background:
+            "linear-gradient(90deg, rgba(32,32,32,1) 0%, rgba(40,40,59,1) 61%, rgba(32,32,32,1) 100%);",
+        }}
+      >
         <Toolbar variant="dense">
           <Typography variant="h6" sx={{ flexGrow: 1 }} color="white">
             <Link

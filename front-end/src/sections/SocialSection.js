@@ -8,10 +8,10 @@ const SocialSection = () => {
         backgroundImage: "url(images/SocialFeedBackground.jpeg)",
         backgroundSize: "cover",
         width: "100vw",
-        height: "100vh",
+        height: "110vh",
       }}
     >
-      <div style={{ padding: "20vh" }}>
+      <div style={{ paddingLeft: "15vw", paddingTop: "15vh" }}>
         <TweeterFeed />
       </div>
     </div>
