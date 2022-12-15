@@ -10,17 +10,25 @@ const ClosedBetaInput = () => {
   const [email, setEmail] = useState("");
   const ref = collection(firestore, "emails");
 
-  const handleClick = () => {
-    const data = {
-      email: email,
-    };
+  function isValidEmail() {
+    return /\S+@\S+\.\S+/.test(email);
+  }
 
-    try {
-      addDoc(ref, data);
-    } catch (e) {
-      console.log(e);
+  const handleClick = () => {
+    if (isValidEmail()) {
+      const data = {
+        email: email.toString(),
+      };
+
+      try {
+        addDoc(ref, data);
+      } catch (e) {
+        console.log(e);
+      }
+      setEmail("");
+    } else {
+      window.alert("error");
     }
-    setEmail("");
   };
 
   const handleChange = (event) => {
@@ -28,13 +36,6 @@ const ClosedBetaInput = () => {
   };
 
   return (
-    // <div>
-    //   <form onSubmit={handleSave}>
-    //     <label>Enter Message</label>
-    //     <input type="text" ref={messageRef} />
-    //     <button type="submit">Submit</button>
-    //   </form>
-    // </div>
     <Box
       component="form"
       sx={{
