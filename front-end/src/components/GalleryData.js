@@ -1,7 +1,40 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import GalleryImgComponent from "./GalleryImgComponent";
+import { storage } from "../firebase";
+import { ref, listAll, getDownloadURL } from "firebase/storage";
 
 function GalleryData() {
+  const [screenImages, setScreenImages] = useState([]);
+  const didFetch = useRef(false);
+  const [keyImages, setKeyImages] = useState([]);
+  const screenListRef = ref(storage, "screenshots/");
+  const keyArtListRef = ref(storage, "keyart/");
+
+  const getScreenShotsImages = async () => {
+    const list = await listAll(screenListRef);
+    list.items.forEach((item) => {
+      getDownloadURL(item).then((url) => {
+        setScreenImages((prev) => [...prev, url]);
+      });
+    });
+  };
+
+  const getKeyArtImages = async () => {
+    const list = await listAll(keyArtListRef);
+    list.items.forEach((item) => {
+      getDownloadURL(item).then((url) => {
+        setKeyImages((prev) => [...prev, url]);
+      });
+    });
+  };
+
+  useEffect(() => {
+    if (!didFetch.current) {
+      getScreenShotsImages();
+      getKeyArtImages();
+    }
+    didFetch.current = true;
+  }, [keyImages, screenImages]);
   return (
     <div
       style={{
@@ -10,8 +43,8 @@ function GalleryData() {
         justifyContent: "center",
       }}
     >
-      <GalleryImgComponent props="Screen Shots" />
-      <GalleryImgComponent props="Key Art" />
+      <GalleryImgComponent props="Screen Shots" images={screenImages} />
+      <GalleryImgComponent props="Key Art" images={keyImages} />
     </div>
   );
 }

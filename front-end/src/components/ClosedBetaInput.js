@@ -2,11 +2,24 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
+import { firestore } from "../firebase";
+import { addDoc, collection } from "@firebase/firestore";
+import { useState } from "react";
 
 const ClosedBetaInput = () => {
-  const [email, setEmail] = React.useState("");
+  const [email, setEmail] = useState("");
+  const ref = collection(firestore, "emails");
+
   const handleClick = () => {
-    console.log(email);
+    const data = {
+      email: email,
+    };
+
+    try {
+      addDoc(ref, data);
+    } catch (e) {
+      console.log(e);
+    }
     setEmail("");
   };
 
@@ -15,6 +28,13 @@ const ClosedBetaInput = () => {
   };
 
   return (
+    // <div>
+    //   <form onSubmit={handleSave}>
+    //     <label>Enter Message</label>
+    //     <input type="text" ref={messageRef} />
+    //     <button type="submit">Submit</button>
+    //   </form>
+    // </div>
     <Box
       component="form"
       sx={{

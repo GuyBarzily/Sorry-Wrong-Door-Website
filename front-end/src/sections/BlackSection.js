@@ -9,10 +9,15 @@ function BlackSection() {
         height: "100vh",
       }}
     >
-      <div>
-        <h1>HGFDDFS</h1>
-        <ArrowBackIosIcon />
-      </div>
+      <video
+        style={{
+          width: "30vw",
+          height: "40vh",
+        }}
+        src="https://v.redd.it/wn8e8b8xen1a1/DASH_1080.mp4?source=fallback"
+        type="video/mp4"
+        autoPlay={true}
+      />
     </div>
   );
 }

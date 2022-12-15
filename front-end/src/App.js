@@ -4,7 +4,6 @@ import AboutUsSection from "./sections/AboutUsSection";
 import SocialSection from "./sections/SocialSection";
 import ClosedBetaSection from "./sections/ClosedBetaSection";
 import GallerySection from "./sections/GallerySection";
-import BlackSection from "./sections/BlackSection";
 import BasicAppBar from "./components/AppBar";
 
 function App() {

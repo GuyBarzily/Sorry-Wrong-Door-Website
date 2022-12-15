@@ -1,4 +1,3 @@
-import { Button, Box } from "@mui/material";
 import ClosedBetaData from "../components/ClosedBetaData";
 import ClosedBetaInput from "../components/ClosedBetaInput";
 import Title from "../components/Title";

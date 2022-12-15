@@ -5,6 +5,8 @@ import React, { useState, useEffect } from "react";
 function GalleryImgComponent(props) {
   const [mainImage, setMainImage] = useState("");
   const [mainIndex, setIndex] = useState(-1);
+  const [itemData, setItemData] = useState([]);
+  const noImage = "..public/images/No_Image_Available.jpeg";
 
   const arrowStyle = {
     paddingBottom: "10vh",
@@ -14,53 +16,39 @@ function GalleryImgComponent(props) {
 
   const handleClick = (event) => {
     setMainImage(event.target.src);
-    setIndex(Object.values(event.target)[0].key);
+    const index = itemData.indexOf(event.target.src);
+    setIndex(index);
   };
 
   const handleRightArrow = () => {
     let cur = mainIndex;
     if (cur !== itemData.length - 1) {
-      setMainImage(itemData[++cur].img);
+      setMainImage(itemData[++cur]);
       setIndex(cur);
     } else {
-      setMainImage(itemData[0].img);
+      setMainImage(itemData[0]);
       setIndex(0);
     }
   };
 
   const handleLeftArrow = () => {
+    console.log("Left: ", mainIndex);
     let cur = mainIndex;
     const len = itemData.length;
     if (cur !== 0) {
-      setMainImage(itemData[--cur].img);
+      setMainImage(itemData[--cur]);
       setIndex(cur);
     } else {
-      setMainImage(itemData[len - 1].img);
+      setMainImage(itemData[len - 1]);
       setIndex(len - 1);
     }
   };
-  const itemData = [
-    {
-      img: "../images/AboutUsBackground.jpeg",
-      title: 0,
-    },
-    {
-      img: "../images/ClosedBetaBackground.jpeg",
-      title: 1,
-    },
-    {
-      img: "../images/SocialFeedBackground.jpeg",
-      title: 2,
-    },
-    {
-      img: "../images/GalleryBackground.jpeg",
-      title: 3,
-    },
-  ];
+
   useEffect(() => {
-    setMainImage(itemData[0].img);
+    setItemData(props.images);
+    setMainImage(itemData[0]);
     setIndex(0);
-  }, []);
+  }, [props.images, itemData]);
 
   return (
     <div>
@@ -69,6 +57,7 @@ function GalleryImgComponent(props) {
         <ArrowBackIosNewIcon sx={arrowStyle} onClick={handleLeftArrow} />
         <img
           src={mainImage}
+          alt={noImage}
           style={{
             width: "20vw",
             height: "25vh",
@@ -80,9 +69,10 @@ function GalleryImgComponent(props) {
         {itemData.map((item) => (
           <img
             onClick={handleClick}
-            key={item.title}
-            props={item.title}
-            src={item.img}
+            alt={noImage}
+            key={item}
+            // props={item.title}
+            src={item}
             style={{
               paddingLeft: "0.5vw",
               width: "10vw",
