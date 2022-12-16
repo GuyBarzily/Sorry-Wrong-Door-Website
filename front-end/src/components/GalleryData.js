@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import GalleryImgComponent from "./GalleryImgComponent";
+import GalleryCarousel from "./GalleryCarousel";
 import { storage } from "../firebase";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
 
@@ -43,8 +44,8 @@ function GalleryData() {
         justifyContent: "center",
       }}
     >
-      <GalleryImgComponent props="Screen Shots" images={screenImages} />
-      <GalleryImgComponent props="Key Art" images={keyImages} />
+      <GalleryCarousel items={screenImages} />
+      <GalleryCarousel items={keyImages} />
     </div>
   );
 }
