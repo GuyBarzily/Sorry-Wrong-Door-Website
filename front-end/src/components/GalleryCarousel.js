@@ -11,8 +11,8 @@ function GalleryCarousel(props) {
     <div style={{ width: "42vw", padding: "5vw" }}>
       <img
         style={{
-          width: "15vw",
-          height: "20vh",
+          width: "20vw",
+          height: "25vh",
           cursor: "pointer",
           paddingBottom: "0.5vw",
         }}

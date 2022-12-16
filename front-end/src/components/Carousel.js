@@ -4,7 +4,6 @@ import Carousel from "better-react-carousel";
 const CarouselComp = (props) => {
   const [items, setItems] = useState([]);
   const handleClick = (e) => {
-    console.log(e.target);
     props.setMainImg(e.target.src);
   };
   useEffect(() => {
