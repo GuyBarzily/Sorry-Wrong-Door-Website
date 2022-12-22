@@ -10,13 +10,7 @@ const CarouselComp = (props) => {
     setItems(props.items);
   }, [props.items]);
   return (
-    <Carousel
-      containerStyle={{ padding: "0" }}
-      cols={props.cols}
-      rows={1}
-      gap={0}
-      loop
-    >
+    <Carousel cols={props.cols} gap={0} loop>
       {items.map((item, index) => {
         return (
           <Carousel.Item key={index}>

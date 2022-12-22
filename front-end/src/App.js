@@ -5,6 +5,7 @@ import SocialSection from "./sections/SocialSection";
 import ClosedBetaSection from "./sections/ClosedBetaSection";
 import GallerySection from "./sections/GallerySection";
 import BasicAppBar from "./components/AppBar";
+import BlackSection from "./sections/BlackSection";
 
 function App() {
   return (
@@ -15,7 +16,6 @@ function App() {
       <SocialSection />
       <ClosedBetaSection />
       <GallerySection />
-      {/* <BlackSection /> */}
     </div>
   );
 }

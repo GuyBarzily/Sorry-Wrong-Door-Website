@@ -8,7 +8,7 @@ function GalleryCarousel(props) {
     setMainImg(props.items[0]);
   }, [props.items]);
   return (
-    <div style={{ width: "42vw", padding: "5vw" }}>
+    <div style={{ width: "45vw" }}>
       <img
         style={{
           width: "20vw",
