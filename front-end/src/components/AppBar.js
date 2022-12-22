@@ -53,6 +53,7 @@ const BasicAppBar = () => {
               style={{ cursor: "pointer" }}
             >
               <img
+                alt=""
                 src="/images/Angelgameslogo.png"
                 style={{
                   width: "5vw",

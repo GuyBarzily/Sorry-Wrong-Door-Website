@@ -1,4 +1,5 @@
 import TweeterFeed from "../components/TweeterFeed";
+import RedditFeed from "../components/RedditFeed";
 
 const SocialSection = () => {
   return (
@@ -11,8 +12,16 @@ const SocialSection = () => {
         height: "110vh",
       }}
     >
-      <div style={{ paddingLeft: "15vw", paddingTop: "15vh" }}>
+      <div
+        style={{
+          paddingLeft: "20vw",
+          paddingTop: "15vh",
+          display: "flex",
+          height: "65vh",
+        }}
+      >
         <TweeterFeed />
+        <RedditFeed />
       </div>
     </div>
   );

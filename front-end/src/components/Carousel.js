@@ -21,6 +21,7 @@ const CarouselComp = (props) => {
         return (
           <Carousel.Item key={index}>
             <img
+              alt=""
               style={{
                 width: "10vw",
                 height: "15vh",
