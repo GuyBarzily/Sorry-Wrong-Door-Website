@@ -4,8 +4,12 @@ import RedditIcon from "@mui/icons-material/Reddit";
 import { Button } from "@mui/material";
 
 function RedditBar() {
+  const handleClick = () => {
+    window.location.href = "https://www.reddit.com/user/AngelGamesStudio";
+  };
   return (
     <div
+      onClick={handleClick}
       style={{
         borderRadius: "20px",
         backgroundColor: "white",

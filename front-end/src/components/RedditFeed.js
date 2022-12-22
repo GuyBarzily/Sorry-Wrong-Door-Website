@@ -44,7 +44,7 @@ function RedditFeed() {
         <RedditBar />
         <Divider />
       </div>
-      <div style={{ marginTop: "2vh" }}>
+      <div style={{ marginTop: "1vh" }}>
         {data.map((item, index) => {
           return <RedditPost key={index} data={item} />;
         })}
