@@ -47,13 +47,24 @@ const ClosedBetaInput = () => {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "row",
+      }}
+    >
       <Box
         component="form"
         sx={{
           "& > :not(style)": { m: 1, width: "25ch" },
-          display: "inline-flex",
+          display: "flex",
+          flexDirection: "row",
+          alignContent: "center",
+          justifyContent: "center",
           marginTop: "2vh",
+          flexWrap: "wrap",
         }}
         noValidate
         autoComplete="off"
