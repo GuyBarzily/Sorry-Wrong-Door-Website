@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Title from "../components/Title";
 import AboutUsData from "../components/AboutUsData";
 
@@ -14,13 +14,21 @@ const AboutUsSection = () => {
         backgroundImage: "url(images/AboutUsBackground.jpeg)",
         backgroundSize: "cover",
         width: "100vw",
-        height: "110vh",
+        height: "100vh",
       }}
     >
-      <div style={{ paddingLeft: "20vw", paddingTop: "10vh" }}>
+      <Box
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+          flexWrap: "wrap",
+        }}
+      >
         <Title props={aboutUsProp} />
         <AboutUsData />
-      </div>
+      </Box>
     </div>
   );
 };

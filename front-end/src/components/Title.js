@@ -3,13 +3,12 @@ import Box from "@mui/material/Box";
 const Title = (props) => {
   const mainDivStyle = {
     display: "flex",
-    float: "left,",
   };
   return (
     <div style={mainDivStyle}>
       <p
         style={{
-          fontSize: "4vw",
+          fontSize: "6vw",
           color: "white",
           paddingRight: "1vw",
           fontFamily: "Times",
@@ -17,7 +16,7 @@ const Title = (props) => {
       >
         {props.props.first}
       </p>
-      <p style={{ fontSize: "4vw", color: "red", fontFamily: "Times" }}>
+      <p style={{ fontSize: "6vw", color: "red", fontFamily: "Times" }}>
         {props.props.second}
       </p>
     </div>
