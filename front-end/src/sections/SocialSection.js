@@ -1,5 +1,6 @@
 import TweeterFeed from "../components/TweeterFeed";
 import RedditFeed from "../components/RedditFeed";
+import { Box } from "@mui/material";
 
 const SocialSection = () => {
   return (
@@ -9,20 +10,21 @@ const SocialSection = () => {
         backgroundImage: "url(images/SocialFeedBackground.jpeg)",
         backgroundSize: "cover",
         width: "100vw",
-        height: "110vh",
+        minHeight: "100vh",
       }}
     >
-      <div
+      <Box
         style={{
-          paddingLeft: "20vw",
-          paddingTop: "15vh",
+          paddingTop: "10vh",
+          paddingBottom: "2vh",
           display: "flex",
-          height: "65vh",
+          justifyContent: "space-around",
+          flexWrap: "wrap",
         }}
       >
         <TweeterFeed />
         <RedditFeed />
-      </div>
+      </Box>
     </div>
   );
 };

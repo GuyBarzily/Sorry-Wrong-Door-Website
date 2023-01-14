@@ -5,15 +5,15 @@ export const TweeterFeed = () => {
   return (
     <div
       style={{
-        width: "25vw",
-        height: "inherit",
+        height: "70vh",
         overflowY: "scroll",
         borderRadius: "20px",
+        marginBottom: "5vh",
       }}
     >
       <Timeline
         dataSource={{ sourceType: "profile", screenName: "AngelGamesStud1" }}
-        options={{ width: "25vw" }}
+        options={{ width: 350 }}
       />
     </div>
   );

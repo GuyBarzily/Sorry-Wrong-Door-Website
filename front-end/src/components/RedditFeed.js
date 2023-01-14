@@ -33,9 +33,8 @@ function RedditFeed() {
       style={{
         borderRadius: "20px",
         backgroundColor: "white",
-        width: "25vw",
-        height: "inherit",
-        marginLeft: "10vw",
+        width: 350,
+        height: "70vh",
         overflowY: "scroll",
         display: "block",
       }}
