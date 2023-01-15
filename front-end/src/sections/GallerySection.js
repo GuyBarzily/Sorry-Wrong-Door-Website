@@ -13,17 +13,18 @@ const GallerySection = () => {
         backgroundImage: "url(images/GalleryBackground.jpeg)",
         backgroundSize: "cover",
         width: "100vw",
-        height: "110vh",
+        minHeight: "100vh",
       }}
     >
       <div
         style={{
-          paddingLeft: "70vw",
-          paddingTop: "20vh",
           backgroundPosition: "center",
           backgroundImage: "url(images/GameLogo.png)",
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
+          display: "flex",
+          justifyContent: "flex-end",
+          paddingRight: "10vw",
         }}
       >
         <Title props={galleryTitle} />

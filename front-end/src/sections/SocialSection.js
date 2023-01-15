@@ -1,8 +1,14 @@
 import TweeterFeed from "../components/TweeterFeed";
 import RedditFeed from "../components/RedditFeed";
 import { Box } from "@mui/material";
+import Title from "../components/Title";
 
 const SocialSection = () => {
+  const socialProp = {
+    first: "Social",
+    second: "Feed",
+  };
+
   return (
     <div
       id="social-section-id"
@@ -13,6 +19,15 @@ const SocialSection = () => {
         minHeight: "100vh",
       }}
     >
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Title props={socialProp} />
+      </Box>
       <Box
         style={{
           paddingTop: "10vh",

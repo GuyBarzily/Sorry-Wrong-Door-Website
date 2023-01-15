@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 
 const MainSection = () => {
   return (
@@ -8,7 +8,8 @@ const MainSection = () => {
         backgroundImage: "url(images//LandingPageBackground.png)",
         backgroundSize: "cover",
         width: "100vw",
-        height: "110vh",
+        minHeight: "100vh",
+        display: "flex",
         justifyContent: "center",
         alignItems: "center",
       }}
@@ -17,12 +18,9 @@ const MainSection = () => {
         variant="contained"
         href="https://store.steampowered.com/app/2133810/Sorry_wrong_door/"
         sx={{
-          position: "absolute",
-          bottom: "10vw",
-          left: "35vw",
           backgroundColor: "red",
-          width: "30vw",
-          height: "5vh",
+          width: 200,
+          height: 50,
           "&.MuiButtonBase-root:hover": {
             bgcolor: "wheat",
             color: "black",

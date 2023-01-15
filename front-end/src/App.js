@@ -1,16 +1,14 @@
-import "./App.css";
 import MainSection from "./sections/MainSection";
 import AboutUsSection from "./sections/AboutUsSection";
 import SocialSection from "./sections/SocialSection";
 import ClosedBetaSection from "./sections/ClosedBetaSection";
 import GallerySection from "./sections/GallerySection";
-import BasicAppBar from "./components/AppBar";
-import BlackSection from "./sections/BlackSection";
+import MobileAppBar from "./components/MobileAppBar";
 
 function App() {
   return (
-    <div className="App">
-      <BasicAppBar />
+    <div>
+      <MobileAppBar />
       <MainSection />
       <AboutUsSection />
       <SocialSection />

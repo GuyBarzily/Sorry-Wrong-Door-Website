@@ -1,8 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import GalleryImgComponent from "./GalleryImgComponent";
 import GalleryCarousel from "./GalleryCarousel";
+import MobileCarousel from "./MobileCarousel";
 import { storage } from "../firebase";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
+import { Box } from "@mui/material";
 
 function GalleryData() {
   const [screenImages, setScreenImages] = useState([]);
@@ -37,16 +39,18 @@ function GalleryData() {
     didFetch.current = true;
   }, [keyImages, screenImages]);
   return (
-    <div
+    <Box
       style={{
         display: "flex",
-        alignContent: "center",
-        justifyContent: "center",
+        alignItems: "center",
+        justifyContent: "space-around",
+        flexWrap: "wrap",
+        paddingBottom: "5vh",
       }}
     >
-      <GalleryCarousel items={screenImages} />
-      <GalleryCarousel items={keyImages} />
-    </div>
+      <MobileCarousel items={screenImages} title="Screen Images" />
+      <MobileCarousel items={keyImages} title="Key Art" />
+    </Box>
   );
 }
 
