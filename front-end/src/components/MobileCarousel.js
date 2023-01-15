@@ -38,7 +38,7 @@ const MobileCarousel = (props) => {
               loop
               showDots={true}
               scrollSnap={true}
-              autoPlay={1500}
+              autoplay={2000}
             >
               {items.map((item, index) => {
                 return (
