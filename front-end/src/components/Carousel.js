@@ -17,8 +17,8 @@ const CarouselComp = (props) => {
             <img
               alt=""
               style={{
-                width: "10vw",
-                height: "15vh",
+                width: 150,
+                height: 130,
                 cursor: "pointer",
               }}
               src={item}

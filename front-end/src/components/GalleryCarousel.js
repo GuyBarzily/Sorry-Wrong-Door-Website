@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import CarouselComp from "./Carousel";
 
@@ -8,18 +9,18 @@ function GalleryCarousel(props) {
     setMainImg(props.items[0]);
   }, [props.items]);
   return (
-    <div style={{ width: "45vw" }}>
+    <Box>
       <img
         style={{
-          width: "20vw",
-          height: "25vh",
+          width: 300,
+          height: 200,
           cursor: "pointer",
           paddingBottom: "0.5vw",
         }}
         src={mainImage}
       />
-      <CarouselComp items={props.items} setMainImg={setMainImg} cols={4} />
-    </div>
+      <CarouselComp items={props.items} setMainImg={setMainImg} cols={1} />
+    </Box>
   );
 }
 
