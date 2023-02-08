@@ -30,7 +30,15 @@ const MobileAppBar = (props) => {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
       <Typography variant="h6" sx={{ my: 2 }}>
         <Link
           activeClass="active"
@@ -50,7 +58,7 @@ const MobileAppBar = (props) => {
           ></img>
         </Link>
       </Typography>
-      <Divider />
+      <Divider sx={{ width: "100%" }} />
       <List>
         <ListItem disablePadding onClick={handleListClick}>
           <Typography
