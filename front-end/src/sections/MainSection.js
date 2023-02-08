@@ -2,16 +2,16 @@ import { Box, Button } from "@mui/material";
 
 const MainSection = () => {
   return (
-    <div
+    <Box
       id="main-section-id"
-      style={{
+      sx={{
         backgroundImage: "url(images//LandingPageBackground.png)",
         backgroundSize: "cover",
         width: "100vw",
         minHeight: "100vh",
         display: "flex",
         justifyContent: "center",
-        alignItems: "center",
+        alignItems: "flex-end",
       }}
     >
       <Button
@@ -19,7 +19,8 @@ const MainSection = () => {
         href="https://store.steampowered.com/app/2133810/Sorry_wrong_door/"
         sx={{
           backgroundColor: "red",
-          width: 200,
+          marginBottom: 15,
+          width: 300,
           height: 50,
           "&.MuiButtonBase-root:hover": {
             bgcolor: "wheat",
@@ -29,7 +30,7 @@ const MainSection = () => {
       >
         View Game
       </Button>
-    </div>
+    </Box>
   );
 };
 
