@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Box, Typography } from "@mui/material";
 import Carousel from "better-react-carousel";
 
-function MobileCarousel(props) {
+function WebCarousel(props) {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -10,17 +10,25 @@ function MobileCarousel(props) {
   }, [props.items]);
   return (
     <>
-      <Typography variant="h4" color="white" sx={{ paddingBottom: "10px" }}>
+      <Typography variant="h3" color="white" sx={{ paddingBottom: "10px" }}>
         {props.title}
       </Typography>
-      <Box sx={{ width: "100%", paddingBottom: "10vh" }}>
-        <Carousel cols={1} rows={1} gap={50} mobileBreakpoint={600}>
+      <Box sx={{ width: 650 }}>
+        <Carousel
+          cols={1}
+          rows={1}
+          gap={10}
+          loop
+          showDots={true}
+          scrollSnap={true}
+          autoplay={2500}
+        >
           {items.map((item, index) => {
             return (
-              <Carousel.Item key={index} scrollSnap={true} width="100%">
+              <Carousel.Item key={index}>
                 <img
                   src={item}
-                  style={{ height: 200, width: "100%", borderRadius: 20 }}
+                  style={{ height: 300, width: 600, borderRadius: "25px" }}
                 />
               </Carousel.Item>
             );
@@ -31,4 +39,4 @@ function MobileCarousel(props) {
   );
 }
 
-export default MobileCarousel;
+export default WebCarousel;

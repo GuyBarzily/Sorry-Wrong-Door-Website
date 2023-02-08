@@ -1,7 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import GalleryImgComponent from "./GalleryImgComponent";
-import GalleryCarousel from "./GalleryCarousel";
-import MobileCarousel from "./MobileCarousel";
+import CarouselHolder from "./CarouselHolder";
 import { storage } from "../firebase";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
 import { Box } from "@mui/material";
@@ -48,8 +46,8 @@ function GalleryData() {
         paddingBottom: "5vh",
       }}
     >
-      <MobileCarousel items={screenImages} title="Screen Images" />
-      <MobileCarousel items={keyImages} title="Key Art" />
+      <CarouselHolder items={screenImages} title="Screen Images" />
+      <CarouselHolder items={keyImages} title="Key Art" />
     </Box>
   );
 }
