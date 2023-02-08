@@ -13,19 +13,6 @@ function RedditFeed() {
     setData(res.data);
   };
   useEffect(() => {
-    // setData([
-    //   {
-    //     author: "AngelGamesStudio",
-    //     comments: 0,
-    //     subreddit_name_prefixed: "r/indiegames",
-    //     thumbnail:
-    //       "https://b.thumbs.redditmedia.com/WfbclKgwoCIDzv_nGrUEPqSMC9szYfXBv9Pp3qOfUkA.jpg",
-    //     title:
-    //       "Hey everyone, I just added a destruction effect to my horror game! Is that a bit too much?",
-    //     url: "https://v.redd.it/vfievr53to5a1",
-    //     video: "https://v.redd.it/vfievr53to5a1/DASH_1080.mp4?source=fallback",
-    //   },
-    // ]);
     getData();
   }, []);
   return (
