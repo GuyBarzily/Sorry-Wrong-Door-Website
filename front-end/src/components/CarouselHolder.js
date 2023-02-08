@@ -27,8 +27,8 @@ const CarouselHolder = (props) => {
     <Box
       sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      {windowSize > 600 && <WebCarousel items={items} title={props.title} />}
-      {windowSize <= 600 && (
+      {windowSize > 650 && <WebCarousel items={items} title={props.title} />}
+      {windowSize <= 650 && (
         <MobileCarousel items={items} title={props.title} />
       )}
     </Box>
