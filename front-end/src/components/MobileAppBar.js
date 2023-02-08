@@ -14,6 +14,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Link } from "react-scroll";
+import { fontSize } from "@mui/system";
 
 const drawerWidth = 240;
 
@@ -150,7 +151,7 @@ const MobileAppBar = (props) => {
             "linear-gradient(90deg, rgba(32,32,32,1) 0%, rgba(40,40,59,1) 61%, rgba(32,32,32,1) 100%);",
         }}
       >
-        <Toolbar>
+        <Toolbar sx={{ paddingTop: "5px" }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -164,7 +165,10 @@ const MobileAppBar = (props) => {
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", sm: "block" },
+            }}
           >
             <Link
               activeClass="active"
@@ -184,55 +188,77 @@ const MobileAppBar = (props) => {
               ></img>
             </Link>
           </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            <Button sx={{ color: "#fff", flexGrow: 1 }}>
-              <Link
-                activeClass="active"
-                to="about-us-section-id"
-                spy={true}
-                smooth={true}
-                duration={500}
-                style={{ cursor: "pointer" }}
-              >
-                About Us
-              </Link>
-            </Button>
-            <Button sx={{ color: "#fff", flexGrow: 1 }}>
-              <Link
-                activeClass="active"
-                to="social-section-id"
-                spy={true}
-                smooth={true}
-                duration={500}
-                style={{ cursor: "pointer" }}
-              >
-                Social Feed
-              </Link>
-            </Button>
-            <Button sx={{ color: "#fff", flexGrow: 1 }}>
-              <Link
-                activeClass="active"
-                to="closed-beta-section-id"
-                spy={true}
-                smooth={true}
-                duration={500}
-                style={{ cursor: "pointer" }}
-              >
-                Closed Beta
-              </Link>
-            </Button>
-            <Button sx={{ color: "#fff", flexGrow: 1 }}>
-              <Link
-                activeClass="active"
-                to="gallery-section-id"
-                spy={true}
-                smooth={true}
-                duration={500}
-                style={{ cursor: "pointer" }}
-              >
-                Gallery
-              </Link>
-            </Button>
+          <Box
+            sx={{
+              display: { xs: "none", sm: "block" },
+            }}
+          >
+            <Box sx={{ width: "80vw", display: "flex" }}>
+              <Button sx={{ color: "#fff", flexGrow: 1 }}>
+                <Link
+                  activeClass="active"
+                  to="about-us-section-id"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  style={{
+                    cursor: "pointer",
+                    fontSize: "large",
+                    fontFamily: "serif",
+                  }}
+                >
+                  About Us
+                </Link>
+              </Button>
+              <Button sx={{ color: "#fff", flexGrow: 1 }}>
+                <Link
+                  activeClass="active"
+                  to="social-section-id"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  style={{
+                    cursor: "pointer",
+                    fontSize: "large",
+                    fontFamily: "serif",
+                  }}
+                >
+                  Social Feed
+                </Link>
+              </Button>
+              <Button sx={{ color: "#fff", flexGrow: 1 }}>
+                <Link
+                  activeClass="active"
+                  to="closed-beta-section-id"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  style={{
+                    cursor: "pointer",
+                    fontSize: "large",
+                    fontFamily: "serif",
+                  }}
+                >
+                  Closed Beta
+                </Link>
+              </Button>
+              <Button sx={{ color: "#fff", flexGrow: 1 }}>
+                <Link
+                  activeClass="active"
+                  to="gallery-section-id"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  style={{
+                    cursor: "pointer",
+                    fontSize: "large",
+                    fontFamily: "serif",
+                  }}
+                >
+                  Gallery
+                </Link>
+              </Button>
+            </Box>
           </Box>
         </Toolbar>
       </AppBar>
