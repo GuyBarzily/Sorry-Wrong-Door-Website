@@ -14,10 +14,18 @@ function MobileCarousel(props) {
         {props.title}
       </Typography>
       <Box sx={{ width: "100%", paddingBottom: "10vh" }}>
-        <Carousel cols={1} rows={1} gap={50} mobileBreakpoint={600}>
+        <Carousel
+          cols={1}
+          rows={1}
+          gap={15}
+          loop={true}
+          mobileBreakpoint={600}
+          scrollSnap={true}
+          autoplay={2000}
+        >
           {items.map((item, index) => {
             return (
-              <Carousel.Item key={index} scrollSnap={true} width="100%">
+              <Carousel.Item key={index} width="100%">
                 <img
                   src={item}
                   style={{ height: 200, width: "100%", borderRadius: 20 }}
