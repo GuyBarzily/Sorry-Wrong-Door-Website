@@ -17,7 +17,7 @@ function MobileCarousel(props) {
         <Carousel
           cols={1}
           rows={1}
-          gap={15}
+          gap={40}
           loop={true}
           mobileBreakpoint={600}
           scrollSnap={true}
